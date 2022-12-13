@@ -1,0 +1,18 @@
+<div class="table">
+    <thead>
+        <tr scope="col">#</tr>
+        <tr scope="col">Description</tr>
+        <tr scope="col">Date de création</tr>
+        <tr scope="col">Duree</tr>
+        <tr scope="col">Nom du formateur</tr>
+
+    </thead>
+    <tr *ngFor="let formation of formations">
+        <th scope="row">{{formation.id}}</th>
+        <td>{{formation.description}}</td>
+        <td>{{formation.date_creation}}</td>
+        <td>{{formation.duree}}</td>
+        <td>{{formation.formateur_id}}</td>
+
+    </tr>
+</div>

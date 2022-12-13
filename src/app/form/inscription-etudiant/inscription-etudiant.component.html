@@ -1,0 +1,101 @@
+<body class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail"  id="myform" (ngSubmit)="addApprenant()">
+				<div class="form-left">
+					<h2>Administratif</h2>
+                    
+                    <div class="d-grid gap-2 d-md-block">
+                        <h6 class="form-title">Vous êtes ?</h6>
+                        <a routerLink="/inscriptionE" class="btn btn-primary" role="button">Apprenant</a>
+                        <a routerLink="/inscriptionF" class="btn btn-primary" role="button">Formateur</a>
+                      </div>
+
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="nom" [(ngModel)]="this.apprenants.nom" id="first_name" class="input-text" placeholder="First Name" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="prenom" [(ngModel)]="this.apprenants.prenom" id="last_name" class="input-text" placeholder="Last Name" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="code" class="code" id="code" placeholder="Code +" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="tel" [(ngModel)]="this.apprenants.phone" class="phone" id="phone" placeholder="Phone Number" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" name="email" [(ngModel)]="this.apprenants.email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-7">
+                            <h6>Date de Naiss.</h6>
+							<input type="date" name="date_naissance" [(ngModel)]="this.apprenants.date_naissance" class="date_naissance" id="date_naissance" placeholder="Date de Naissance" required>
+						</div>
+						<div class="form-row form-row-4">
+                            <h6>Pays</h6>
+							<select name="pays" [(ngModel)]="this.apprenants.pays_id">
+							    <option value="employees">Senegal</option>
+							    <option >pays</option>
+							    
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="form-right">
+					<h2>Identifiant</h2>
+					<div class="form-row">
+						<input type="text" name="pseudo" class="pseudo" id="pseudo" placeholder="Pseudo" required pattern="[a-z]{4,8}">
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="password" name="password" [(ngModel)]="this.apprenants.password" class="password" id="password" placeholder="Mot De Passe" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="password" name="password" class="password" id="password" placeholder="Confirmer votre mot de passe" required>
+						</div>
+					</div>
+                    <h2>Etude</h2>
+					<div class="form-group">
+						<div class="form-row form-row-4">
+                            <h6>Niveau</h6>
+							<select name="pays" [(ngModel)]="this.apprenants.niveaux_id">
+							    <option>Senegal</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+                        <div class="form-row form-row-4">
+                            <h6>Diplôme</h6>
+							<select name="pays" [(ngModel)]="this.apprenants.diplome_id">
+							    <option value="employees">Ingénieur</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+					<div class="form-checkbox">
+						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
+						  	<input type="checkbox" name="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Je m'inscris">
+                        <p class="loginhere">
+                            Vous avez déjà un compte ?<a routerLink="/connexion" class="loginhere-link"> Connectez-vous ici</a>
+                        </p>
+                    </div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>

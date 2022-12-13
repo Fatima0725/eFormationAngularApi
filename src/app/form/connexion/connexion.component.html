@@ -1,0 +1,34 @@
+<div class="main">
+
+    <h1>Sign up</h1>
+    <div class="container">
+        <div class="sign-up-content">
+            <form (ngSubmit)="registerUser()" class="signup-form">
+                <h2 class="form-title">Bienvenue à Nouveau!</h2>
+
+                <div class="form-textbox">
+                    <label for="name">Pseudo</label>
+                    <input type="text" name="pseudo" [(ngModel)]="this.login.pseudo" id="pseudo" />
+                </div>
+                <div class="form-textbox">
+                    <label for="pass">Password</label>
+                    <input type="password" name="password" [(ngModel)]="this.login.password" id="pass" />
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                </div>
+
+                <div class="form-textbox">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Je me connecte" />
+                </div>
+            </form>
+
+            <p class="loginhere">
+                Vous n'avez pas de compte ?<a routerLink="/inscriptionE" class="loginhere-link"> Log in</a>
+            </p>
+        </div>
+    </div>
+
+</div>
